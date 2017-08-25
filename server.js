@@ -91,10 +91,12 @@ app.get('/:articleName',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
+     var articleName = req.params.articleName;
      res.send(createTemplate(articletwo[articleName]));
 });
 
 app.get('/article-three',function(req,res){
+     var articleName = req.params.articleName;
     res.send(createTemplate(articlethree[articleName]));
 });
 
